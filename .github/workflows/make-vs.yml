@@ -16,6 +16,8 @@ jobs:
 
     - name: Install dependencies
       run: sudo apt install -y python3-pip
+
+    - name: install j2cli
       run: pip3 install --user j2cli
 
     - name: Run check
