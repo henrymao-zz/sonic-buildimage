@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04-8c
 
     steps:
     - uses: actions/checkout@v3
@@ -20,12 +20,12 @@ jobs:
     - name: install j2cli
       run: pip3 install --user j2cli
 
-    - name: Run check
+    - name: Run make init
       run: make init
 
-    - name: Run distcheck
-      run: make configure PLATFORM=vs MIRROR_URLS=http://archive.debian.org/debian/
+    - name: Run make configure
+      run: make configure PLATFORM=vs 
       
-    - name: Run distcheck
+    - name: Run make all
       run: make SONIC_BUILD_JOBS=4 all
       
