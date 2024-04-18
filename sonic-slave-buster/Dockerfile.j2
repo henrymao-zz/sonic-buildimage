@@ -117,9 +117,10 @@ RUN apt-get update && apt-get install -y eatmydata && eatmydata apt-get install 
         libzmq5 \
         libzmq3-dev \
         uuid-dev \
-        jq \
+        jq 
+	
 # For sonic-swss-common
-        nlohmann-json3-dev \
+RUN eatmydata apt-get install -y nlohmann-json3-dev \
 # For quagga build
         libreadline-dev \
         texlive-latex-base \
@@ -147,9 +148,10 @@ RUN apt-get update && apt-get install -y eatmydata && eatmydata apt-get install 
         python3-all-dbg \
 {%- endif %}
         install-info \
-        logrotate \
+        logrotate 
+	
 # For libnl3 (local) build
-        cdbs \
+RUN eatmydata apt-get install -y cdbs \
 # For SAI meta build
         libxml-simple-perl \
         graphviz \
@@ -188,9 +190,9 @@ RUN apt-get update && apt-get install -y eatmydata && eatmydata apt-get install 
         libslf4j-java \
         libservlet3.1-java \
         qt5-default \
-        pkg-php-tools \
+        pkg-php-tools 
 # For mellanox sdk build
-        libpcre3 \
+RUN eatmydata apt-get install -y libpcre3 \
         libpcre3-dev \
         byacc \
         flex \
@@ -211,9 +213,9 @@ RUN apt-get update && apt-get install -y eatmydata && eatmydata apt-get install 
         libunwind8-dev \
         telnet \
         libc-ares2 \
-        libgoogle-perftools4 \
+        libgoogle-perftools4 
 # For build image
-        cpio \
+RUN eatmydata apt-get install -y cpio \
         squashfs-tools \
         zip \
 # For broadcom sdk build
@@ -243,9 +245,9 @@ RUN apt-get update && apt-get install -y eatmydata && eatmydata apt-get install 
         libjudy-dev \
         libedit-dev \
         libnanomsg-dev \
-        python-stdeb \
+        python-stdeb
 # For redis build
-        libjemalloc-dev \
+RUN eatmydata apt-get install -y libjemalloc-dev \
         liblua5.1-0-dev \
         lua-bitop-dev  \
         lua-cjson-dev \
@@ -294,9 +296,9 @@ RUN apt-get update && apt-get install -y eatmydata && eatmydata apt-get install 
         libxslt-dev \
 {%- endif %}
 # For lockfile
-        procmail \
+        procmail 
 # For gtest
-        libgtest-dev \
+RUN eatmydata apt-get install -y libgtest-dev \
         cmake \
 # For gmock
         libgmock-dev \
@@ -334,9 +336,9 @@ RUN apt-get update && apt-get install -y eatmydata && eatmydata apt-get install 
         autogen \
         libopts25-dev \
         pps-tools \
-        dh-apparmor \
+        dh-apparmor 
 # For lm-sensors
-        librrd8 \
+RUN eatmydata apt-get install -y librrd8 \
         librrd-dev \
         rrdtool \
 # For kdump-tools
@@ -384,9 +386,9 @@ RUN apt-get update && apt-get install -y eatmydata && eatmydata apt-get install 
         docbook-to-man       \
         docbook-utils        \
 # For kdump-tools
-        libbz2-dev \
+        libbz2-dev 
 # For linkmgrd
-        libboost1.71-dev \
+RUN eatmydata apt-get install -y libboost1.71-dev \
         libboost-serialization1.71-dev \
         libboost-program-options1.71-dev \
         libboost-system1.71-dev \
