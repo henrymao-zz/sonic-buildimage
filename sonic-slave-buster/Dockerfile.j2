@@ -117,10 +117,9 @@ RUN apt-get update && apt-get install -y eatmydata && eatmydata apt-get install 
         libzmq5 \
         libzmq3-dev \
         uuid-dev \
-        jq 
-	
+        jq \
 # For sonic-swss-common
-RUN eatmydata apt-get install -y nlohmann-json3-dev \
+        nlohmann-json3-dev \
 # For quagga build
         libreadline-dev \
         texlive-latex-base \
@@ -148,10 +147,9 @@ RUN eatmydata apt-get install -y nlohmann-json3-dev \
         python3-all-dbg \
 {%- endif %}
         install-info \
-        logrotate 
-	
+        logrotate \
 # For libnl3 (local) build
-RUN eatmydata apt-get install -y cdbs \
+        cdbs \
 # For SAI meta build
         libxml-simple-perl \
         graphviz \
@@ -190,9 +188,9 @@ RUN eatmydata apt-get install -y cdbs \
         libslf4j-java \
         libservlet3.1-java \
         qt5-default \
-        pkg-php-tools 
+        pkg-php-tools \
 # For mellanox sdk build
-RUN eatmydata apt-get install -y libpcre3 \
+        libpcre3 \
         libpcre3-dev \
         byacc \
         flex \
@@ -213,9 +211,9 @@ RUN eatmydata apt-get install -y libpcre3 \
         libunwind8-dev \
         telnet \
         libc-ares2 \
-        libgoogle-perftools4 
+        libgoogle-perftools4 \
 # For build image
-RUN eatmydata apt-get install -y cpio \
+        cpio \
         squashfs-tools \
         zip \
 # For broadcom sdk build
@@ -245,9 +243,9 @@ RUN eatmydata apt-get install -y cpio \
         libjudy-dev \
         libedit-dev \
         libnanomsg-dev \
-        python-stdeb
+        python-stdeb \
 # For redis build
-RUN eatmydata apt-get install -y libjemalloc-dev \
+        libjemalloc-dev \
         liblua5.1-0-dev \
         lua-bitop-dev  \
         lua-cjson-dev \
@@ -296,9 +294,9 @@ RUN eatmydata apt-get install -y libjemalloc-dev \
         libxslt-dev \
 {%- endif %}
 # For lockfile
-        procmail 
+        procmail \
 # For gtest
-RUN eatmydata apt-get install -y libgtest-dev \
+        libgtest-dev \
         cmake \
 # For gmock
         libgmock-dev \
@@ -336,9 +334,9 @@ RUN eatmydata apt-get install -y libgtest-dev \
         autogen \
         libopts25-dev \
         pps-tools \
-        dh-apparmor 
+        dh-apparmor \
 # For lm-sensors
-RUN eatmydata apt-get install -y librrd8 \
+        librrd8 \
         librrd-dev \
         rrdtool \
 # For kdump-tools
@@ -386,9 +384,9 @@ RUN eatmydata apt-get install -y librrd8 \
         docbook-to-man       \
         docbook-utils        \
 # For kdump-tools
-        libbz2-dev 
+        libbz2-dev \
 # For linkmgrd
-RUN eatmydata apt-get install -y libboost1.71-dev \
+        libboost1.71-dev \
         libboost-serialization1.71-dev \
         libboost-program-options1.71-dev \
         libboost-system1.71-dev \
